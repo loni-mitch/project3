@@ -1,0 +1,283 @@
+@import url(http://fonts.googleapis.com/css?family=Dosis:300|Lato:300,400,600,700|Roboto+Condensed:300,700|Open+Sans+Condensed:300,600|Open+Sans:400,300,600,700|Maven+Pro:400,700);
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+*{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+p {
+  color: white;
+  font-size: medium;
+}
+
+h1 {
+  color: #0b3c5d;
+}
+
+h2 {
+  color: #d9b310;
+}
+
+.cheaplogo{
+  color: white;
+}
+
+.ologo {
+  color: white;
+}
+
+.maillogo {
+  color: #328cc1
+}
+
+.content span {
+  font-size: 0.9rem;
+}
+
+.content .title{
+  text-align: center;
+  font-size: 2.0rem;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+
+.nav li .logo {
+  text-align: left;
+  margin-left: -275px;
+  font-size: 3.0rem;
+  padding-top: 10px;
+  font-weight: 600;
+  color: #CC9900;
+}
+
+.nav li a .logout{
+  position: fixed
+  margin-right -200px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #EDF4F5;
+  font-family: "Open Sans";
+  font-size: 12px;
+  color: White;
+}
+
+.nav ul {
+  list-style: none;
+  text-align: center;
+  padding-bottom: 10px;
+  background-color: #1d2731;
+  margin: auto auto;
+  -moz-box-shadow: 0 0 10px black;
+  -webkit-box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
+}
+
+.nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 30px;
+  border-bottom: 1px solid #888;
+  margin-left: 50px;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition: .3s background-color;
+  margin-left: -50px;
+  padding-top: 20px
+}
+ 
+.nav a:hover {
+  background-color: #d9b310;
+}
+ 
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+ 
+@media screen and (min-width: 600px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+
+.nav li {
+    display: inline-block;
+    margin-right: -4px
+}
+
+label {
+  color: #328cc1;
+  font-weight: bold;
+  font-family: "Open Sans";
+}
+
+.mail{
+    color: black;
+    width: 500px;
+    background-color: #328cc1;
+    border-radius: 10px;
+}
+
+.showbutton{
+    background-color: #0b3c5d;
+    color: white;
+    border: none;
+    width: 100px;
+    font-weight: bold;
+}
+
+.unread{
+    font-weight: bold;
+}
+
+.read{
+    font-weight: normal;
+}
+
+.hide{
+    display: none;
+}
+
+.content:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  display: block;
+  background-color: black;
+  background-image: url("http://www.wallpaperinhd.net/file/8624/2880x1800/stretch/butterfly-(1920x1200)-wallpaper-13.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 450px;
+  height: 450px;
+  background-color: rgba(10, 10, 10, 0.5);
+  margin: auto auto;
+  padding: 40px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0 0 10px black;
+  -webkit-box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
+}
+
+.content input {
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: "Open Sans";
+  margin: 10px 0px;
+  border: none;
+  padding: 10px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.content input[type=checkbox] {
+  display: none;
+}
+.content label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  margin-left: 5px;
+  margin-right: 10px;
+  top: 5px;
+}
+.content label:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: #aaa;
+  -moz-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
+}
+.content input[type=checkbox]:checked + label:before {
+  content: "\2713";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  color: Black;
+  text-align: center;
+  line-height: 20px;
+}
+
+.content button {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 10px;
+  margin: 20px 0px;
+  background-color: #D9B310;
+  color: White;
+  border: none;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.content .centerspan {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.content .centerspan span {
+  display: inline-block;
+  vertical-align: baseline;
+  padding: 0 20px;
+}
+
+.content .centerspan span:before, .content .centerspan span:after {
+  content: '';
+  display: block;
+  width: 500px;
+  position: absolute;
+  top: 0.9em;
+  border-top: 1px solid White;
+}
+.content .centerspan span:before {
+  right: 75%;
+}
+.content .centerspan span:after {
+  left: 75%;
+}

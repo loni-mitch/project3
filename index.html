@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>CheapoMail</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
+    
+    <body>
+        
+        <!-- Navigation Bar Area -->
+        
+        <div id="navbar" class="nav">
+            <ul>
+                <li><div class="logo"><span class="cheaplogo" >CHEAP</span><span class="ologo">o</span><span class="maillogo">MAIL</span></div></li>
+                <li><a class="Home" class ="active" id="home" href="home.html">HOME</a></li>
+                <li><a class="SendMail" id="smail" href="send.html">SEND MAIL</a></li>
+                <li><a class="AddUser" id="adduser" href="signup.html">ADD USER</a></li>
+                <li><a class="logout" id="logout" href="index.html">LOGOUT</a></li>
+            </ul>
+        </div>
+        
+        <br><br>
+        
+        <!-- Ending of Navigation Bar Area -->
+        
+        <!-- Change Main Area for No Refresh AJAX -->
+        
+        <div id="main">
+            <div class="content">
+                <div class="title">CHEAPoMAIL</div>
+                <div class=centerspan>Log in to use CHEAPoMAIL</div>
+                <input name="username" id="usname" placeholder="Username" type="text"/> <br>
+                <input name="password" id="pass" placeholder="Password" type="password"/> <br><br>
+                <input type="checkbox" id="rememberMe"/>
+                <label for="rememberMe"></label><span class="spanedit">Remember me</span>
+                <button value="Submit" id="logbtn" class="button">Sign In</button>
+                <p id="status"></p>
+            </div>
+        </div>
+        
+        <!-- Ending of Main Area -->
+        
+    </body>
+</html>

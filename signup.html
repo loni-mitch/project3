@@ -1,0 +1,118 @@
+<h1>Create A User</h1>
+
+<form id="signupform">
+    <label for="firstname">First Name: </label>
+    <input name="firstname" id="fname" type="text" required/> <br>
+
+    <label for="lastname">Last Name: </label>
+    <input name="lastname" id="lname" type="text" required/> <br>
+
+    <label for="username">Username: </label>
+    <input name="username" id="uname" type="text" required/> <br>
+
+    <label for="password">Password: </label>
+    <input name="password" id="pword" type="password" required/> <br><br>
+
+    <input value="Submit" id="subform" type="submit" class="button"/>
+</form>
+
+<p id="status"></p>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="jquery.validate.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+<script type="text/javascript">
+    /* global $ */
+    /* global jQuery */
+    $(document).ready(function(){
+        
+        $("#signupform").on('submit',function(e){
+            
+            e.preventDefault();
+            
+            //Add validate methods to validate content
+    		jQuery.validator.addMethod("isPassword", function(value, element) {
+    		    return this.optional(element) || /^((?=.*[\d])(?=.*[a-z])(?=.*[A-Z])|(?=.*[a-z])(?=.*[A-Z])(?=.*[^\w\d\s])|(?=.*[\d])(?=.*[A-Z])(?=.*[^\w\d\s])|(?=.*[\d])(?=.*[a-z])(?=.*[^\w\d\s])).{8,30}$/gm.test(value);
+    		}, "Your password must contain a capital letter, lowercase letter, a number and special character");
+    
+    		jQuery.validator.addMethod("isAlpha", function(value, element) {
+    			// Firstname, lastname and Username must be alpha characters
+    		    return this.optional(element) || /(?!.*[\s\-]{2,})^[a-zA-Z0-9\s\-]{1,24}$/gm.test(value);
+    		}, "Must only contain alpha characters, hyphens or spaces");
+    		
+    		$('#signupform').validate({ // initialize the plugin
+    	        rules: {
+    	            firstname: {
+    	                required: true,
+    	                isAlpha: true
+    	            },
+    	            lastname: {
+    	                required: true,
+    	                isAlpha: true
+    	            },
+    	            username: {
+    	            	required: true,
+    	            	isAlpha: true
+    	            },
+    	            password: {
+    	            	required: true,
+    	            	isPassword: true
+    	            }
+    	        },
+    	        message: {
+    	            firstname: {
+    	                required: "Your first name is required",
+    	                isAlpha: "Your first name must only contain alpha characters, hyphens or spaces"
+    	            },
+    	            lastname: {
+    	                required: "Your last name is required",
+    	                isAlpha: "Your last name must only contain alpha characters, hyphens or spaces"
+    	            },
+    	            username: {
+    	                required: "Your username is required",
+    	                isAlpha: "Your username must only contain alpha characters, hyphens or spaces"
+    	            },
+    	            password: {
+    	                required: "A password is required",
+    	                isPassword: "Your password must contain a capital letter, lowercase letter, a number and special character"
+    	            }
+    	        },
+    	        submitHandler: function (form) {
+    	            submit();
+    	            return true;
+    	        }
+    		});
+    		
+    		function submit(){
+                        
+                var fname = $("#fname").val();
+                var lname = $("#lname").val();
+                var uname = $("#uname").val();
+                var pword = $("#pword").val();
+                
+                var params = 'firstname='+fname+'&lastname='+lname+'&username='+uname+'&password='+pword;
+                
+                var link = 'cheapomail.php';
+                
+                var xmlhttp = new XMLHttpRequest();
+                
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4){
+                        if (this.status == 200) {
+                            $("#status").text(xmlhttp.responseText);
+                    
+                        }
+                        else{
+                            $("#status").text("Some Unknown Error Occured");
+                        }
+                    }
+                };
+                
+                xmlhttp.open("POST", link, true);
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xmlhttp.send(params);
+    		}
+        });
+    });
+</script>
