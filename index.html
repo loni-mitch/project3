@@ -8,11 +8,18 @@
     
     <body>
         
+        
         <!-- Navigation Bar Area -->
         
         <div id="navbar" class="nav">
+            <div  class="ban">
+           
+                <span class="cheaplogo" >CHEAP</span><span class="ologo">o</span><span class="maillogo">MAIL</span>
+           
+            </div>
+            
             <ul>
-                <li><div class="logo"><span class="cheaplogo" >CHEAP</span><span class="ologo">o</span><span class="maillogo">MAIL</span></div></li>
+
                 <li><a class="Home" class ="active" id="home" href="home.html">HOME</a></li>
                 <li><a class="SendMail" id="smail" href="send.html">SEND MAIL</a></li>
                 <li><a class="AddUser" id="adduser" href="signup.html">ADD USER</a></li>
@@ -27,16 +34,19 @@
         <!-- Change Main Area for No Refresh AJAX -->
         
         <div id="main">
+            <h1 class="welcome">WELCOME!</h1>
+            <h3>CheapoMail provides a simple messaging system that only sends mail to other CheapoMail users. </h3>
             <div class="content">
-                <div class="title">CHEAPoMAIL</div>
+                <div class="title">CHEAPo<span class="title2">Mail</span></div>
                 <div class=centerspan>Log in to use CHEAPoMAIL</div>
                 <input name="username" id="usname" placeholder="Username" type="text"/> <br>
                 <input name="password" id="pass" placeholder="Password" type="password"/> <br><br>
                 <input type="checkbox" id="rememberMe"/>
-                <label for="rememberMe"></label><span class="spanedit">Remember me</span>
+                <label for="rememberMe"></label><span class="spanedit">Remember me?</span>
                 <button value="Submit" id="logbtn" class="button">Sign In</button>
                 <p id="status"></p>
             </div>
+            
         </div>
         
         <!-- Ending of Main Area -->

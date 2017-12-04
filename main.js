@@ -26,7 +26,8 @@ $(document).ready(function(){
                             getmail();
                         }
                         else{
-                            $("#status").text("User Info Not Found! Check Login Info!");
+                            $("#status").text("Incorrect username or password!").css({'color':'red'});
+                           
                         }
                     }
                     else{

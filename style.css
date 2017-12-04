@@ -7,17 +7,60 @@
   box-sizing: border-box;
 }
 
-p {
+p{
+  color: #45a049;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  
+}
+p1{
   color: white;
-  font-size: medium;
+  font-size: 20px;
+  text-align: left;
+  
+  
 }
 
 h1 {
   color: #0b3c5d;
+  text-align:center;
 }
 
 h2 {
-  color: #d9b310;
+  color: red;
+  text-align:center;
+}
+.welcome{
+  text-align: center;
+  color:green;
+  font-family:algerian;
+  font-size: 40px;
+  opacity: 0;
+  -webkit-animation: welcome 18s linear infinite ;
+  -ms-animation: welcome 18s linear infinite ;
+  animation: welcome 18s linear infinite ;
+}
+@-webkit-keyframes welcome {
+    
+    0% { opacity: 1; }
+    2% { opacity: 0; }
+    5% { opacity: 0; -webkit-transform: translateY(-30px); }
+    17% { opacity: 1; -webkit-transform: translateY(0px);}
+    50% { opacity: 1; -webkit-transform: translateY(0px); }
+    80% { opacity: 0; -webkit-transform: translateY(30px); }
+    100% { opacity: 1; }
+}
+
+h3{
+  text-align: center;
+  color:#328cc1;
+  font-family: Bree Serif;
+  font-size: 15px;
+
+}
+p3{
+  color:red;
 }
 
 .cheaplogo{
@@ -35,39 +78,44 @@ h2 {
 .content span {
   font-size: 0.9rem;
 }
-
+.spanedit{
+  color:white;
+}
 .content .title{
   text-align: center;
   font-size: 2.0rem;
   font-weight: 600;
   padding-bottom: 30px;
+  color:white;
 }
-
-.nav li .logo {
+.content .title2{
+  text-align: center;
+  font-size: 2.0rem;
+  font-weight: 600;
+  padding-bottom: 30px;
+  color:#328cc1;
+}
+.ban {
   text-align: left;
-  margin-left: -275px;
   font-size: 3.0rem;
   padding-top: 10px;
   font-weight: 600;
   color: #CC9900;
 }
 
-.nav li a .logout{
-  position: fixed
-  margin-right -200px;
-}
+
 
 body {
   margin: 0;
   padding: 0;
-  background: #EDF4F5;
+  background-image: url("http://brittiowa.com/wp-content/uploads/2016/03/Broadway-Grass2.jpg");
   font-family: "Open Sans";
   font-size: 12px;
-  color: White;
+  
 }
 
 .nav ul {
-  list-style: none;
+  
   text-align: center;
   padding-bottom: 10px;
   background-color: #1d2731;
@@ -96,7 +144,7 @@ body {
 }
  
 .nav a:hover {
-  background-color: #d9b310;
+  background-color: #45a049;
 }
  
 .nav a.active {
@@ -120,24 +168,37 @@ body {
 }
 
 label {
-  color: #328cc1;
+  color:red;
   font-weight: bold;
   font-family: "Open Sans";
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .mail{
     color: black;
-    width: 500px;
-    background-color: #328cc1;
-    border-radius: 10px;
+    background-color:rgba(0, 0, 0, 0.5);
+    margin-left:50px;
+    margin-right:50px;
+    padding-left:10px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    
 }
-
+.recv{
+  color:red;
+}
 .showbutton{
-    background-color: #0b3c5d;
+    background-color: #328cc1;
     color: white;
     border: none;
     width: 100px;
     font-weight: bold;
+    margin-left: 5px;
 }
 
 .unread{
@@ -147,7 +208,6 @@ label {
 .read{
     font-weight: normal;
 }
-
 .hide{
     display: none;
 }
@@ -161,16 +221,13 @@ label {
   bottom: 0;
   z-index: -1;
   display: block;
-  background-color: black;
-  background-image: url("http://www.wallpaperinhd.net/file/8624/2880x1800/stretch/butterfly-(1920x1200)-wallpaper-13.jpg");
+  background-color: blue;
+  background-image: url("http://brittiowa.com/wp-content/uploads/2016/03/Broadway-Grass2.jpg");
   width: 100%;
   height: 100%;
   background-size: cover;
-  -webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  -o-filter: blur(2px);
-  -ms-filter: blur(2px);
-  filter: blur(2px);
+  
+ 
 }
 
 .content {
@@ -181,15 +238,18 @@ label {
   right: 0;
   width: 450px;
   height: 450px;
-  background-color: rgba(10, 10, 10, 0.5);
-  margin: auto auto;
+  background-color:rgba(0, 0, 0, 0.5);
+  margin-top: 180px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 40px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  -moz-box-shadow: 0 0 10px black;
-  -webkit-box-shadow: 0 0 10px black;
-  box-shadow: 0 0 10px black;
+  -moz-box-shadow: 0 0 20px white;
+  -webkit-box-shadow: 0 0 20px white;
+  box-shadow: 0 0 20px white;
+  
 }
 
 .content input {
@@ -197,7 +257,6 @@ label {
   font-size: 1.2rem;
   font-family: "Open Sans";
   margin: 10px 0px;
-  border: none;
   padding: 10px;
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
@@ -206,16 +265,20 @@ label {
 
 .content input[type=checkbox] {
   display: none;
+
 }
+
+
 .content label {
   display: inline-block;
   width: 20px;
   height: 20px;
   cursor: pointer;
   position: relative;
-  margin-left: 5px;
+  margin-left: 247px;
   margin-right: 10px;
   top: 5px;
+
 }
 .content label:before {
   content: "";
@@ -232,10 +295,11 @@ label {
   -moz-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
   -webkit-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
   box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
+  
 }
 .content input[type=checkbox]:checked + label:before {
   content: "\2713";
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 1px white;
   font-size: 20px;
   color: Black;
   text-align: center;
@@ -247,12 +311,18 @@ label {
   font-size: 1.1rem;
   padding: 10px;
   margin: 20px 0px;
-  background-color: #D9B310;
+  background-color: #328cc1;
   color: White;
   border: none;
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   border-radius: 0px;
+  
+}
+
+.content button:hover {
+  background-color: #45a049;
+  
 }
 
 .content .centerspan {
@@ -260,6 +330,8 @@ label {
   position: relative;
   overflow: hidden;
   text-align: center;
+  color:red;
+  font-size: 15px;
 }
 .content .centerspan span {
   display: inline-block;
@@ -273,11 +345,97 @@ label {
   width: 500px;
   position: absolute;
   top: 0.9em;
-  border-top: 1px solid White;
+  border-top: 1px solid blue;
 }
 .content .centerspan span:before {
   right: 75%;
 }
 .content .centerspan span:after {
   left: 75%;
+}
+.send{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 450px;
+  height: 500px;
+  background-color:rgba(0, 0, 0, 0.5);
+  margin-top: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0 0 20px white;
+  -webkit-box-shadow: 0 0 20px white;
+  box-shadow: 0 0 20px white;
+  font-size: 18px;
+  
+}
+
+.add{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 450px;
+  height: 500px;
+  background-color:rgba(0, 0, 0, 0.5);
+  margin-top: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0 0 20px white;
+  -webkit-box-shadow: 0 0 20px white;
+  box-shadow: 0 0 20px white;
+  font-size: 18px;
+}
+.button{
+  float:right;
+  font-size: 1.1rem;
+  padding: 10px;
+  margin: 20px 0px;
+  background-color: #328cc1;
+  color: White;
+  border: none;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+input[type=text], select {
+  
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
+input[type=password], select {
+  
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
+textarea, select {
+  
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
 }

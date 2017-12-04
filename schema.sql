@@ -37,4 +37,4 @@ CREATE TABLE `messages_read` (
 
 -- Create Admin Account
 
-INSERT INTO `users` VALUES(1,'admin','admin','admin', sha1('password'));
+INSERT INTO `users` VALUES(1,'admin', 'admin','admin',sha1('password123'));

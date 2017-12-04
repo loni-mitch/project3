@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sql = "INSERT INTO users(firstname, lastname, username, password) VALUES('$fname', '$lname', '$uname', '$pword');";
         $conn->exec($sql);
         
-        echo 'Successfully Added User';
+        echo 'Successfully Added User!';
     }
     
     //logout
@@ -108,10 +108,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $conn->exec($q);
         }
         
-        echo 'Message Sent';
+        echo "Message sent!";
     }
 }
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    
     // user id to recieve mail
     $rcvr = $_SESSION["user_id"];
     $getmail = strip_tags($_GET["getmail"]);
@@ -125,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $res2 = $stmt2->fetchAll(PDO::FETCH_COLUMN, 0);
         
         if(count($res) == 0){
-            echo "<h2>No Mail Found</h2>";
+            echo "<h2>You Have No Mail Today!</h2>";
         }
         
         else{
@@ -136,18 +137,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 
                 if (in_array($mail["id"], $res2)){
                     echo '<div class="mail read">';
-                    echo '<p>(Read)</p>';
+                    echo '<p1>(Read)</p1><br>';
                 }
                 else{
                     echo '<div class="mail unread">';
+                    
                 }
-                
-                echo '<p>From: ' . $sendr["username"] . '</p>';
-                echo '<p>Subject: ' . $mail["subject"] . '</p>';
-                echo '<p class="recv">Message: ' . $mail["body"] . '</p>';
-                echo '<input type="submit" class="showbutton" value="Read"/>';
-                echo '<p class="hide">' . $mail["id"] . '</p>';
-                echo '</div> <br><br>';
+                    
+                  
+                echo '<p1>From: ' . $sendr["username"] . '</p1><br>';
+                echo '<p1>Subject: ' . $mail["subject"] . '</p1><br>';
+                echo '<p1>Date: ' . $mail["date"] . '</p1><br>';
+                echo '<p1 class="recv">Message: ' . $mail["body"] . '</p1>';
+                echo '<input type="submit" class="showbutton" value="Read"/><br>';
+                echo '<p1 class="hide">' . $mail["id"] . '</p1><br>';
+                echo '</div><br>';
+              
             }
         }
     }
